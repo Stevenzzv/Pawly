@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pawly Inventory - The Digital Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#8deedb",
+                    "on-secondary": "#e3fff7",
+                    "surface-tint": "#006592",
+                    "error-container": "#f56965",
+                    "outline": "#747c7c",
+                    "surface": "#f7faf9",
+                    "on-tertiary-fixed-variant": "#6f562a",
+                    "secondary": "#006b5e",
+                    "on-secondary-fixed": "#004e44",
+                    "on-primary": "#f5f9ff",
+                    "surface-container-highest": "#dce4e3",
+                    "primary-container": "#7bc9ff",
+                    "surface-bright": "#f7faf9",
+                    "tertiary-fixed": "#fedba3",
+                    "primary-fixed": "#7bc9ff",
+                    "inverse-primary": "#78c6fd",
+                    "on-primary-fixed-variant": "#004a6c",
+                    "on-error": "#fff7f6",
+                    "on-surface-variant": "#586160",
+                    "secondary-fixed": "#9bfde9",
+                    "on-background": "#2c3434",
+                    "tertiary-dim": "#674f24",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#abb4b3",
+                    "tertiary-fixed-dim": "#efcd96",
+                    "error-dim": "#70030f",
+                    "inverse-on-surface": "#9a9e9d",
+                    "surface-container": "#e9efee",
+                    "on-tertiary": "#fff8f2",
+                    "error": "#ac3434",
+                    "on-surface": "#2c3434",
+                    "primary-dim": "#005981",
+                    "tertiary-container": "#fedba3",
+                    "surface-container-high": "#e3eae8",
+                    "secondary-container": "#9bfde9",
+                    "surface-container-low": "#f0f4f3",
+                    "on-error-container": "#65000b",
+                    "on-primary-fixed": "#002b41",
+                    "on-tertiary-fixed": "#503a11",
+                    "on-primary-container": "#00415f",
+                    "primary": "#006592",
+                    "background": "#f7faf9",
+                    "on-secondary-fixed-variant": "#006d5f",
+                    "surface-dim": "#d2dcdb",
+                    "surface-variant": "#dce4e3",
+                    "secondary-dim": "#005e52",
+                    "tertiary": "#745b2f",
+                    "primary-fixed-dim": "#6cbbf1",
+                    "inverse-surface": "#0b0f0f",
+                    "on-secondary-container": "#006256",
+                    "on-tertiary-container": "#644c21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Lexend"],
+                    "label": ["Lexend"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Lexend', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#f7faf9] dark:bg-slate-900 w-full top-0 z-40">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly golden retriever dog looking at the camera with a soft warm lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLJ3Imwawgr9tW5Vpqpq6j8AnjPgS_l3H4ExIEppVqD02UpW79yzT39Dlq8343E8jy5pEA5ydZyEXzKiLzNsQ1vkR9mSHRKhdmWZcuhO7C_CxDWTshcnNHlll1G6jh7lxLbet6k-GGq-nwrnuibetlkI-AyCDVPOu_sciJ2fIvO89c-3hcxUjnedhPkgr5c6UiX5Nv0HZz0_JnjIu-hSF8DB9z51DezUCnopB0O8o2zJmdje677g4Su6ygQcEqCKYEYEUm0XqjMwV"/>
+</div>
+<h1 class="text-2xl font-bold text-sky-800 dark:text-sky-300 font-['Plus_Jakarta_Sans'] tracking-tight">Pawly</h1>
+</div>
+
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 pt-6">
+<!-- Prediction Widget / Hero Section -->
+<section class="mb-8 relative overflow-hidden bg-gradient-to-br from-primary to-primary-dim rounded-[2rem] p-8 text-on-primary shadow-xl">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label text-sm uppercase tracking-widest text-primary-container opacity-90">Smart Analysis</span>
+</div>
+<h2 class="text-3xl font-headline font-extrabold mb-4 leading-tight">Your food will run out in 4 days.</h2>
+<div class="flex flex-col sm:flex-row sm:items-center gap-4">
+<div class="bg-white/10 backdrop-blur-md rounded-xl px-5 py-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">payments</span>
+<p class="font-body text-lg">Estimated cost: <span class="font-bold">$25</span></p>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-semibold px-8 py-4 rounded-xl shadow-lg active:scale-95 transition-transform">
+                        Refill Now
+                    </button>
+</div>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary-container opacity-20 rounded-full blur-3xl"></div>
+</section>
+<!-- Search & Action Bar -->
+<div class="flex items-center gap-4 mb-8">
+<div class="flex-1 bg-surface-container-high rounded-2xl flex items-center px-4 py-3 gap-3">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full font-body" placeholder="Search pantry..." type="text"/>
+</div>
+<button class="bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined">barcode_scanner</span>
+</button>
+</div>
+<!-- Inventory List -->
+<div class="space-y-6">
+<h3 class="text-xl font-headline font-bold text-on-surface-variant flex items-center gap-2">
+                Pantry Items
+                <span class="bg-surface-container-highest text-on-surface-variant text-xs px-2 py-1 rounded-full">3 active</span>
+</h3>
+<!-- Item 1: Premium Kibble -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="w-full md:w-32 h-32 rounded-2xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High quality dry organic pet food in a ceramic bowl, warm natural lighting on a clean kitchen surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6E3VEnbjGBN9ljGur8aEEE-UDKQaNnx1WfGLvAHoK3nQbqk7fCfZNdybUD7FSsg1u6CewWWrd6sG9Ud6Y2-yG-GYT3yvisofre-ZBJgVa27ft3jVxl0fWXp0_2JkLUJyZiNuqmI2viyHIGtx097g2tiJt2hOPDPShVYOiEODKO7Sul30ZusDeScB8Mm8OFeIQOCDf6y0MtIS5hYHy-U8xSU9b6mfYmzCALhhlMsI92ELUCSKpPMaC63FRSP_rwJJBop4JZsMxd0RZ"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface">Premium Kibble</h4>
+<p class="text-on-surface-variant font-body">Adult Salmon &amp; Rice Formula</p>
+</div>
+<span class="bg-error-container/10 text-error-dim font-bold text-sm px-3 py-1 rounded-full">Low Stock</span>
+</div>
+<div class="mt-4 mb-2 flex justify-between items-end">
+<span class="text-sm font-label font-medium text-on-surface-variant">Quantity Left</span>
+<span class="text-lg font-headline font-extrabold text-primary">15%</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-error-container h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex-1 md:flex-none border border-outline-variant/30 text-on-surface-variant px-4 py-3 rounded-xl font-medium hover:bg-surface-container-low transition-colors">
+                        Edit
+                    </button>
+<button class="flex-1 md:flex-none bg-primary text-on-primary px-6 py-3 rounded-xl font-bold shadow-md active:scale-95 transition-transform">
+                        Refill
+                    </button>
+</div>
+</div>
+<!-- Item 2: Wet Food Cans -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start md:items-center">
+<div class="w-full md:w-32 h-32 rounded-2xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Stack of assorted premium pet food cans with clean minimalist labels on a soft teal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnfDZzJh35rwmgLCAJznK5JosvJ0MCd4p9ZmumoKW7ZWmTg5kLbUHFLpt5vQOBQ8lCYNBnQGCdwVHrRuMSMBMk8Mu9NBWVKCnaBwrjOZuAFHIGeK2dDL0NweRIN3-YfTOiYFaqUcyucgFdX1nxQ-GuVmmd7eSoeRrHeSSW2f_XX23ZKpWTP1QG7F7Ue9RF92hShwlIeOf8ZIanVWcHLl3XIhf8gwbLgRMSC4nECOiGu5RIlKxiTTErfVDF_EC7s59ERp1NlJReoSVa"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface">Wet Food Cans</h4>
+<p class="text-on-surface-variant font-body">Assorted Poultry Pack (12ct)</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-bold text-sm px-3 py-1 rounded-full">Good Stock</span>
+</div>
+<div class="mt-4 mb-2 flex justify-between items-end">
+<span class="text-sm font-label font-medium text-on-surface-variant">Quantity Left</span>
+<span class="text-lg font-headline font-extrabold text-secondary">65%</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<div class="flex gap-2 w-full md:w-auto">
+<button class="flex-1 md:flex-none border border-outline-variant/30 text-on-surface-variant px-4 py-3 rounded-xl font-medium hover:bg-surface-container-low transition-colors">
+                        Edit
+                    </button>
+<button class="flex-1 md:flex-none bg-surface-container-high text-on-surface-variant px-6 py-3 rounded-xl font-bold active:scale-95 transition-transform">
+                        Add
+                    </button>
+</div>
+</div>
+<!-- Item 3: Dental Treats -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start md:items-center opacity-80">
+<div class="w-full md:w-32 h-32 rounded-2xl overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale" data-alt="Close-up of heart-shaped pet treats on a light wooden surface with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5EdaUcX6nVP7CWVzK_FL17COq2utEnU2VBUyDVGxDJQMDbvCoTFwJK8Xrb0OIhu9EHWLg7HNtNZpDvMVX_F6BvlEKjL2VjvhCd-eindouX1ObSzlnge6n5gJ3PtKO7kbqDsmWXLLmKf__VR4oBCM1_9sHgxYxJFiaNHApKhp-rajKCQMCLfMgY7qb5hnmVAEiiEKYOZKNHmMJZnnDzGtTBBe0fLIXkZtsprhfP3ExTVzgEi3FHx5YxaUNYlCg4RJMeasdRd2IHClf"/>
+</div>
+<div class="flex-1 w-full text-outline">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-xl font-headline font-bold">Dental Treats</h4>
+<p class="font-body">Large Breed Minty Fresh</p>
+</div>
+<span class="bg-surface-container-highest text-on-surface-variant font-bold text-sm px-3 py-1 rounded-full">Empty</span>
+</div>
+<div class="mt-4 mb-2 flex justify-between items-end">
+<span class="text-sm font-label font-medium">Quantity Left</span>
+<span class="text-lg font-headline font-extrabold">0%</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+<button class="w-full md:w-auto bg-tertiary-container text-on-tertiary-container px-6 py-3 rounded-xl font-bold shadow-md active:scale-95 transition-transform">
+                    Buy Again
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-none shadow-[0_-4px_24px_rgba(0,101,146,0.04)] rounded-t-[2rem]">
+<a href="main.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Inventory</span>
+</a>
+<a href="health.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Health</span>
+</a>
+<a href="finance.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Finance</span>
+</a>
+</nav>
+<!-- Contextual FAB (Suppressed based on Inventory context but adding for Scan Barcode intent) -->
+<button class="fixed bottom-28 right-6 w-16 h-16 bg-gradient-to-tr from-secondary to-secondary-dim text-on-secondary rounded-2xl shadow-2xl flex items-center justify-center active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">barcode_scanner</span>
+</button>
+</body></html>

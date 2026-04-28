@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pawly - Pet Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes idle-breathe {
+            0%, 100% { transform: scale(1) translateY(0); }
+            50% { transform: scale(1.03) translateY(-4px); }
+        }
+        .animate-idle {
+            animation: idle-breathe 3s ease-in-out infinite;
+        }
+        .voxel-room-gradient {
+            background: linear-gradient(180deg, #dce4e3 0%, #f7faf9 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#f56965",
+                        "on-secondary": "#e3fff7",
+                        "tertiary-container": "#fedba3",
+                        "surface-container-high": "#e3eae8",
+                        "primary-dim": "#005981",
+                        "primary": "#006592",
+                        "surface-container-low": "#f0f4f3",
+                        "on-primary-fixed-variant": "#004a6c",
+                        "inverse-primary": "#78c6fd",
+                        "on-primary-container": "#00415f",
+                        "error": "#ac3434",
+                        "background": "#f7faf9",
+                        "surface-tint": "#006592",
+                        "tertiary-dim": "#674f24",
+                        "primary-fixed": "#7bc9ff",
+                        "secondary-dim": "#005e52",
+                        "on-error": "#fff7f6",
+                        "secondary-container": "#9bfde9",
+                        "primary-container": "#7bc9ff",
+                        "on-surface": "#2c3434",
+                        "on-primary": "#f5f9ff",
+                        "primary-fixed-dim": "#6cbbf1",
+                        "outline-variant": "#abb4b3",
+                        "on-tertiary": "#fff8f2",
+                        "surface-variant": "#dce4e3",
+                        "inverse-on-surface": "#9a9e9d",
+                        "inverse-surface": "#0b0f0f",
+                        "outline": "#747c7c",
+                        "on-secondary-fixed": "#004e44",
+                        "surface-dim": "#d2dcdb",
+                        "surface-container": "#e9efee",
+                        "on-primary-fixed": "#002b41",
+                        "error-dim": "#70030f",
+                        "on-secondary-fixed-variant": "#006d5f",
+                        "surface": "#f7faf9",
+                        "on-tertiary-fixed-variant": "#6f562a",
+                        "tertiary-fixed-dim": "#efcd96",
+                        "on-tertiary-fixed": "#503a11",
+                        "on-background": "#2c3434",
+                        "on-surface-variant": "#586160",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#65000b",
+                        "secondary": "#006b5e",
+                        "tertiary-fixed": "#fedba3",
+                        "secondary-fixed": "#9bfde9",
+                        "tertiary": "#745b2f",
+                        "secondary-fixed-dim": "#8deedb",
+                        "surface-container-highest": "#dce4e3",
+                        "surface-bright": "#f7faf9",
+                        "on-tertiary-container": "#644c21",
+                        "on-secondary-container": "#006256"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 absolute flex justify-between items-center px-6 py-4 z-50">
+<div class="flex items-center gap-3">
+<h1 class="font-headline font-bold tracking-tight text-2xl text-primary">Pawly</h1>
+</div>
+
+</header>
+<main class="relative h-screen flex flex-col overflow-hidden">
+<!-- Top Section: Pet Room (60% height) -->
+<section class="h-[55%] relative voxel-room-gradient overflow-hidden">
+<!-- Re-integrated Multi-pet Selector from SCREEN_8 -->
+<div class="absolute top-16 left-0 w-full z-40 px-6 py-4 overflow-x-auto no-scrollbar">
+<div class="flex gap-4 items-center">
+<div class="flex flex-col items-center gap-1 flex-shrink-0">
+<div class="w-14 h-14 rounded-full p-0.5 ring-2 ring-primary bg-white shadow-md">
+<img alt="Buddy" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfoaJU4vPdOxEEEo1U5IAneOE-sHXlFMd_Unjz-cEMyBsedKQj_wckVr81wZ34J0tuhGCdSOuvyD2WC5sdyH2wTbRiig5EvzDbgwlAIosaqIktUmO2YbHtlDxYzu8s_AU1fPA1bsSaQSyD2HLJ2BY68dcRcurT3sgkE9gnauToLq24xRrcSokJFKIZS54hwAMtAjIMcIimAZ9YS8HPMrwn-x6JopLQkHNAT0BQhL0ZZWB3WYdjfAgBmEfgNmMWosvIn48aS5dA-LW7"/>
+</div>
+<span class="text-[10px] font-bold text-primary">Buddy</span>
+</div>
+<div class="flex flex-col items-center gap-1 flex-shrink-0 opacity-60">
+<div class="w-14 h-14 rounded-full p-0.5 ring-1 ring-outline-variant bg-white/50">
+<img alt="Mittens" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_MxxXYbQKGvFKSsBPH2hSkAk2V82ZjMWRx4YmwybN0m5j_35OvVVe2_ztbcJn7xSSldEBAQvAL92KylkHjuF_hcIqIFIziwl9vTt9XfWRav160Yw1aDAiruSYIQv6JGtz_Y5X6AZf5QkZtD_VNp-xnWrpujnSMSd2wXNTClpRDXqsabx9OEqdd2mHui0L5Ru1NSqQ9yY4qDF3ujVgR45CnxPpv-IYlQldv8CoP6KMa0hsTa2pj7syk7daZSfMXUh5tm2b2qv3gkr_"/>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Mittens</span>
+</div>
+<div onclick="window.location.href='addpet.html'" class="flex flex-col items-center gap-1 flex-shrink-0">
+<button class="w-14 h-14 rounded-full border-2 border-dashed border-primary/40 flex items-center justify-center text-primary/60 hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</button>
+<span class="text-[10px] font-medium text-on-surface-variant">Add Pet</span>
+</div>
+</div>
+</div>
+<!-- Notification Bubble -->
+<div class="absolute top-[35%] right-8 z-40 animate-bounce">
+<div class="bg-white px-4 py-2 rounded-2xl shadow-lg relative border border-primary/10">
+<p class="font-headline font-bold text-primary text-sm">Vet Visit in 3 days</p>
+<div class="absolute -bottom-1.5 right-6 w-3 h-3 bg-white rotate-45 border-r border-b border-primary/10"></div>
+</div>
+</div>
+<!-- Voxel Pet (Buddy) - Central Focus -->
+<div class="absolute inset-0 flex items-center justify-center pt-24">
+<div class="relative w-full max-w-sm h-full flex flex-col items-center justify-center">
+<!-- Base Shadow -->
+<div class="absolute bottom-[25%] w-48 h-10 bg-black/5 blur-xl rounded-[100%]"></div>
+<!-- Central Pet Avatar from SCREEN_2 -->
+<div class="animate-idle relative z-10 w-64 h-64 flex items-center justify-center">
+<img alt="Buddy Voxel" class="w-full h-full object-contain filter drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzbS39-PVsay0G6GwvDQDu7T1RznipzWnv54suQiFVdvnGQugSCwp1Qx2dYtgeCL6pQC-vkDqCh88LALuiu5BUvybpypzMyeI9ipgnhDeH1vq57HkecWHdkMiOHWfJdvqiSrK9BhYlErOZ0qAdOIbBHvvG-oRX5C9rT01jA9_12YU_Q42ykVvTyXitBMl211kJoPXqvXYFUXP45W4NgfbAlknYujhj1uDMdEFcihFs9w_EimxTqDZBqzTElSBKoIWPmmWTfw5nD4QV"/>
+</div>
+<!-- Interactive HUD Icons -->
+<button class="absolute left-10 top-[45%] p-4 bg-white/80 backdrop-blur-md rounded-2xl shadow-xl hover:scale-110 transition-transform border border-white">
+<span class="material-symbols-outlined text-3xl text-tertiary" data-icon="restaurant">restaurant</span>
+<div class="text-[8px] font-black text-tertiary-dim text-center mt-1">FEED</div>
+</button>
+<button class="absolute right-10 top-[55%] p-4 bg-white/80 backdrop-blur-md rounded-2xl shadow-xl hover:scale-110 transition-transform border border-white">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="sports_baseball">sports_baseball</span>
+<div class="text-[8px] font-black text-primary-dim text-center mt-1">PLAY</div>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Section: RPG Stats Panel (45% height) -->
+<section class="h-[45%] bg-white flex flex-col rounded-t-[2.5rem] shadow-[0_-16px_48px_rgba(0,101,146,0.08)] relative z-20 border-t border-primary/5">
+<div class="w-12 h-1.5 bg-surface-container-high rounded-full mx-auto mt-4 mb-6"></div>
+<div class="px-8 flex-1 overflow-y-auto pb-28">
+<header class="flex justify-between items-center mb-6">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Buddy</h2>
+<p class="text-on-surface-variant font-medium text-sm">Level 12 Golden Retriever</p>
+</div>
+<!-- Currency Component -->
+<div class="flex items-center gap-2 bg-tertiary-container/20 px-4 py-2 rounded-2xl border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-headline font-extrabold text-tertiary-dim text-xl">$482.50</span>
+</div>
+</header>
+<div class="space-y-4">
+<!-- Vitality Bar (Clean Modern RPG Style) -->
+<div class="bg-surface-container-low p-5 rounded-2xl border border-surface-container">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-500 text-xl">bolt</span>
+<h3 class="font-headline font-bold text-on-surface text-sm">Vitality</h3>
+</div>
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-wide">65% Food Left</span>
+</div>
+<div class="h-4 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-orange-400 to-green-500 rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Condition & Health Status -->
+<div class="flex gap-4">
+<div class="flex-1 bg-surface-container-low p-4 rounded-2xl flex items-center gap-3 border border-surface-container">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Status</span>
+<span class="font-bold text-secondary text-sm">HEALTHY</span>
+</div>
+</div>
+<div class="flex-1 bg-error-container/5 p-4 rounded-2xl flex items-center gap-3 border border-error-container/10">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">vaccines</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold text-error/60 uppercase tracking-tighter">Alert</span>
+<span class="font-bold text-error text-sm uppercase">Urgent</span>
+</div>
+</div>
+</div>
+<!-- Daily Log Item -->
+<div class="bg-surface-container-lowest p-4 rounded-2xl border border-surface-container flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="directions_walk">directions_walk</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm text-on-surface">Evening Walk</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Completed • 45 mins ago</p>
+</div>
+<div class="text-right">
+<span class="block text-secondary font-black text-xs">+120 XP</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-none shadow-[0_-4px_24px_rgba(0,101,146,0.04)] rounded-t-[2rem]">
+<a href="main.html" class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Inventory</span>
+</a>
+<a href="health.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Health</span>
+</a>
+<a href="finance.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Finance</span>
+</a>
+</nav>
+</main>
+</body></html>

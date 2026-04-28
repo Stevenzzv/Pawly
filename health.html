@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#8deedb",
+                    "on-secondary": "#e3fff7",
+                    "surface-tint": "#006592",
+                    "error-container": "#f56965",
+                    "outline": "#747c7c",
+                    "surface": "#f7faf9",
+                    "on-tertiary-fixed-variant": "#6f562a",
+                    "secondary": "#006b5e",
+                    "on-secondary-fixed": "#004e44",
+                    "on-primary": "#f5f9ff",
+                    "surface-container-highest": "#dce4e3",
+                    "primary-container": "#7bc9ff",
+                    "surface-bright": "#f7faf9",
+                    "tertiary-fixed": "#fedba3",
+                    "primary-fixed": "#7bc9ff",
+                    "inverse-primary": "#78c6fd",
+                    "on-primary-fixed-variant": "#004a6c",
+                    "on-error": "#fff7f6",
+                    "on-surface-variant": "#586160",
+                    "secondary-fixed": "#9bfde9",
+                    "on-background": "#2c3434",
+                    "tertiary-dim": "#674f24",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#abb4b3",
+                    "tertiary-fixed-dim": "#efcd96",
+                    "error-dim": "#70030f",
+                    "inverse-on-surface": "#9a9e9d",
+                    "surface-container": "#e9efee",
+                    "on-tertiary": "#fff8f2",
+                    "error": "#ac3434",
+                    "on-surface": "#2c3434",
+                    "primary-dim": "#005981",
+                    "tertiary-container": "#fedba3",
+                    "surface-container-high": "#e3eae8",
+                    "secondary-container": "#9bfde9",
+                    "surface-container-low": "#f0f4f3",
+                    "on-error-container": "#65000b",
+                    "on-primary-fixed": "#002b41",
+                    "on-tertiary-fixed": "#503a11",
+                    "on-primary-container": "#00415f",
+                    "primary": "#006592",
+                    "background": "#f7faf9",
+                    "on-secondary-fixed-variant": "#006d5f",
+                    "surface-dim": "#d2dcdb",
+                    "surface-variant": "#dce4e3",
+                    "secondary-dim": "#005e52",
+                    "tertiary": "#745b2f",
+                    "primary-fixed-dim": "#6cbbf1",
+                    "inverse-surface": "#0b0f0f",
+                    "on-secondary-container": "#006256",
+                    "on-tertiary-container": "#644c21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Lexend"],
+                    "label": ["Lexend"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-gradient-btn {
+            background: linear-gradient(135deg, #006592 0%, #7bc9ff 100%);
+        }
+        body { font-family: 'Lexend', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-[#f7faf9] dark:bg-slate-900 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Pet Profile Selection" class="w-full h-auto" data-alt="close-up of a friendly golden retriever face with a happy expression and soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB81g1WtM7xYLeXdR8qjbYe_NYwcTl_eSiqak5gbvEhQe-dW5maKXPcujUESsdhQtsUOwjd5bAO59fffcoowskbyu84XPrRHzlzY66XxLNMiZ7gLV2_RRkyhsk5GfLe5LvkjPQGGVlLQ7i4qkCeSdUSS76HNM9PbTy4UyN8CxXTw_VKfyldQh6iulRlWGG9KOgOXPchbRpmjPQ3rSyjcvV9i72phYvdPmRRmbjXQxDToSk0vbp7PF_Bv18sY8UFsSZDySG7iiVNgmow"/>
+</div>
+<h1 class="text-2xl font-bold text-sky-800 dark:text-sky-300 font-['Plus_Jakarta_Sans'] tracking-tight">Pawly</h1>
+</div>
+<div class="flex items-center gap-4">
+
+</div>
+</header>
+<main class="px-6 max-w-4xl mx-auto space-y-8 mt-4">
+<!-- Emergency Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Emergency Hub</h2>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded-full font-bold">LIVE SYNC</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Critical First Aid Button -->
+<button class="relative overflow-hidden group h-44 rounded-[2rem] custom-gradient-btn text-on-primary shadow-lg active:scale-95 transition-transform duration-200 flex flex-col items-center justify-center p-6 space-y-3">
+<div class="absolute top-4 right-4 flex items-center gap-1 bg-white/20 backdrop-blur-md px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]" data-icon="cloud_off">cloud_off</span>
+<span class="text-[10px] font-medium">Offline Ready</span>
+</div>
+<span class="material-symbols-outlined text-5xl" data-icon="emergency_share" style="font-variation-settings: 'FILL' 1;">emergency_share</span>
+<div class="text-center">
+<p class="font-bold text-xl">First Aid Guide</p>
+<p class="text-xs opacity-80">Immediate steps for trauma or toxins</p>
+</div>
+</button>
+<!-- Urgent Contact -->
+<div class="h-44 rounded-[2rem] bg-surface-container-highest p-6 flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">Primary Vet</p>
+<h3 class="text-lg font-bold">St. Francis Hospital</h3>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-medium">2.4 miles away • Open 24/7</p>
+<button class="w-full py-3 bg-error-container/10 border border-error-container/20 text-on-error-container rounded-xl font-bold text-sm hover:bg-error-container/20 transition-colors">
+                            Trigger SOS Call
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Critical Alerts -->
+<section class="bg-tertiary-container/30 rounded-[2rem] p-6 flex items-center gap-4">
+<div class="bg-tertiary-container p-3 rounded-2xl">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-on-tertiary-container">Critical Allergy Warning</h4>
+<p class="text-sm text-on-tertiary-fixed-variant">Cooper is allergic to Penicillin. Always remind medical staff during intake.</p>
+</div>
+</section>
+<!-- Medical History Timeline -->
+<section class="space-y-6">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Health Journey</h2>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="add_circle">add_circle</span>
+                    Add Event
+                </button>
+</div>
+<div class="relative space-y-8 before:absolute before:left-4 before:top-0 before:bottom-0 before:w-0.5 before:bg-surface-container-highest">
+<!-- Timeline Item 1 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary border-4 border-surface flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[16px] text-white" data-icon="vaccines">vaccines</span>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-5 space-y-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold text-outline uppercase">Oct 12, 2023</p>
+<h3 class="font-bold text-lg">Annual DHPP Booster</h3>
+</div>
+<span class="bg-secondary text-white text-[10px] px-2 py-0.5 rounded-full font-bold">COMPLETED</span>
+</div>
+<p class="text-sm text-on-surface-variant">Administered at St. Francis. No adverse reactions observed after 24h monitoring.</p>
+<div class="flex gap-2">
+<div class="group relative w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+<img alt="Prescription Photo" class="w-full h-full object-cover" data-alt="macro shot of a medical prescription document with clear typography and official stamp on clinical white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuswVI3r_efVxZlxiJD3BQM-Qrm3Mnqe44MmDSZ0VR3etu3Xra8np2rSDaKWShonYNOWYYtsliA-5DSvQQXQyt-Rb1EEZh7TH65fu4vjme20cmc9rPHbK-4Tu4Zgj4SvnkKluRDzurDDD7Xj3_wUtre0ibtxzDOHdjREUqdUHTo_K3HEIU2VDvsKZFWZQ2wo7tzPkOUSBnl9HAEzxdi4tPpEwGVlz-AVXB4dykQzPfINj5usp4_whS4TMyGm-_O60g--aW_kcc7eHc"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-white" data-icon="visibility">visibility</span>
+</div>
+</div>
+<div class="w-20 h-20 rounded-xl bg-surface-container-highest flex flex-col items-center justify-center border border-dashed border-outline-variant">
+<span class="material-symbols-outlined text-outline" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span class="text-[9px] font-bold text-outline">REPORT.PDF</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-tertiary border-4 border-surface flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[16px] text-white" data-icon="medication">medication</span>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-5 space-y-4 shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-bold text-outline uppercase">Sep 28, 2023</p>
+<h3 class="font-bold text-lg">Dental Cleaning &amp; Scale</h3>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant">Full sedation cleaning. Prescribed Clindamycin for gum inflammation.</p>
+<div class="flex items-center gap-3 bg-surface-container-lowest p-3 rounded-2xl">
+<div class="p-2 bg-primary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="receipt_long">receipt_long</span>
+</div>
+<div class="flex-1">
+<p class="text-xs font-bold">Medical Invoice #8821</p>
+<p class="text-[10px] text-outline">Attached by St. Francis Portal</p>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded-full">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-none shadow-[0_-4px_24px_rgba(0,101,146,0.04)] rounded-t-[2rem]">
+
+<a href="main.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Home</span>
+</a>
+
+<a href="index.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Inventory</span>
+</a>
+
+<a href="health.html" class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Health</span>
+</a>
+
+<a href="finance.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Finance</span>
+</a>
+</nav>
+</body></html>

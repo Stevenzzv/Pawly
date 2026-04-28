@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pawly - Finance &amp; Budgeting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#8deedb",
+                    "on-secondary": "#e3fff7",
+                    "surface-tint": "#006592",
+                    "error-container": "#f56965",
+                    "outline": "#747c7c",
+                    "surface": "#f7faf9",
+                    "on-tertiary-fixed-variant": "#6f562a",
+                    "secondary": "#006b5e",
+                    "on-secondary-fixed": "#004e44",
+                    "on-primary": "#f5f9ff",
+                    "surface-container-highest": "#dce4e3",
+                    "primary-container": "#7bc9ff",
+                    "surface-bright": "#f7faf9",
+                    "tertiary-fixed": "#fedba3",
+                    "primary-fixed": "#7bc9ff",
+                    "inverse-primary": "#78c6fd",
+                    "on-primary-fixed-variant": "#004a6c",
+                    "on-error": "#fff7f6",
+                    "on-surface-variant": "#586160",
+                    "secondary-fixed": "#9bfde9",
+                    "on-background": "#2c3434",
+                    "tertiary-dim": "#674f24",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#abb4b3",
+                    "tertiary-fixed-dim": "#efcd96",
+                    "error-dim": "#70030f",
+                    "inverse-on-surface": "#9a9e9d",
+                    "surface-container": "#e9efee",
+                    "on-tertiary": "#fff8f2",
+                    "error": "#ac3434",
+                    "on-surface": "#2c3434",
+                    "primary-dim": "#005981",
+                    "tertiary-container": "#fedba3",
+                    "surface-container-high": "#e3eae8",
+                    "secondary-container": "#9bfde9",
+                    "surface-container-low": "#f0f4f3",
+                    "on-error-container": "#65000b",
+                    "on-primary-fixed": "#002b41",
+                    "on-tertiary-fixed": "#503a11",
+                    "on-primary-container": "#00415f",
+                    "primary": "#006592",
+                    "background": "#f7faf9",
+                    "on-secondary-fixed-variant": "#006d5f",
+                    "surface-dim": "#d2dcdb",
+                    "surface-variant": "#dce4e3",
+                    "secondary-dim": "#005e52",
+                    "tertiary": "#745b2f",
+                    "primary-fixed-dim": "#6cbbf1",
+                    "inverse-surface": "#0b0f0f",
+                    "on-secondary-container": "#006256",
+                    "on-tertiary-container": "#644c21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Lexend"],
+                    "label": ["Lexend"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container antialiased">
+<header class="fixed top-0 z-50 bg-[#f7faf9] dark:bg-slate-900 w-full">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Pet profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly golden retriever dog looking at the camera with a soft warm lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNopKiUws9c1dLe3SvNj1_L7CSmeVqy_9NoxIdIziroF4e8nohkyj6zKjKnZtyi7pkPw3Kxox7GvDHkK4gLySIDM5N6bGeaBuXv0B8U5BSJL89EhDyRhE8x9Ef3p5n1pU7UBs9fvgYV415Kq0cojFTZl0Ywrcm5b7Ms5fESPNDv7QkeHyHprDDKsHcp0pvUyUrd7V78NN-NJw8SiVii5gSOiVud5oZZBruLvW17O_RzxWhmLjGFSQAf7jy7IIcbTEaYVPzVELVhQz"/>
+</div>
+</div>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-2xl text-sky-800 dark:text-sky-300">Pawly</h1>
+<div class="flex items-center gap-2">
+
+</div>
+</div>
+</header>
+<main class="pt-20 pb-32 px-6 max-w-2xl mx-auto space-y-8">
+<section class="space-y-2">
+<p class="text-on-surface-variant font-medium text-sm">Monthly Summary</p>
+<h2 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">Finance</h2>
+</section>
+<section class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-[0_-4px_24px_rgba(0,101,146,0.04)] space-y-8">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<p class="text-on-surface-variant text-sm">Total Spent</p>
+<p class="font-headline font-bold text-4xl text-primary">$482.50</p>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold">
+                        Under Budget
+                    </span>
+<p class="text-on-surface-variant text-xs mt-2">Budget: $550.00</p>
+</div>
+</div>
+<div class="flex items-end justify-between h-48 px-4">
+<div class="flex flex-col items-center gap-3 w-1/3">
+<div class="w-full bg-surface-container-low rounded-t-2xl relative h-32 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-primary-container/40 h-[100%]"></div>
+<div class="absolute bottom-0 w-full bg-primary h-[85%] rounded-t-xl"></div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Last Month</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-1/3 mx-4">
+<div class="w-full bg-surface-container-low rounded-t-2xl relative h-40 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-primary-container/40 h-[100%]"></div>
+<div class="absolute bottom-0 w-full bg-primary h-[88%] rounded-t-xl transition-all"></div>
+</div>
+<span class="text-xs font-bold text-on-surface">This Month</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-1/3">
+<div class="w-full bg-surface-container-low rounded-t-2xl relative h-32 overflow-hidden">
+<div class="absolute bottom-0 w-full bg-primary-container/40 h-[100%] opacity-50"></div>
+<div class="absolute bottom-0 w-full bg-surface-variant h-[15%] rounded-t-xl"></div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant">Predicted</span>
+</div>
+</div>
+<div class="flex gap-4 p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs text-on-surface-variant">Actual</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary-container/40"></div>
+<span class="text-xs text-on-surface-variant">Budget</span>
+</div>
+</div>
+</section>
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h3 class="font-headline font-bold text-xl text-on-surface">Expense Breakdown</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Annual Vaccinations</p>
+<p class="text-xs text-on-surface-variant">Vet Clinic Central • Oct 12</p>
+</div>
+</div>
+<p class="font-headline font-bold text-on-surface">$120.00</p>
+</div>
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Premium Kibble 15kg</p>
+<p class="text-xs text-on-surface-variant">Pet Mart Online • Oct 08</p>
+</div>
+</div>
+<p class="font-headline font-bold text-on-surface">$85.50</p>
+</div>
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-2xl hover:bg-surface-container-low transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="content_cut">content_cut</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Full Grooming Session</p>
+<p class="text-xs text-on-surface-variant">Happy Paws Spa • Oct 03</p>
+</div>
+</div>
+<p class="font-headline font-bold text-on-surface">$65.00</p>
+</div>
+</div>
+</section>
+<section class="bg-primary overflow-hidden rounded-[2.5rem] relative p-8 text-on-primary">
+<div class="relative z-10 space-y-4">
+<h4 class="font-headline font-bold text-2xl leading-tight">Save for that new<br/>adventure.</h4>
+<p class="text-on-primary/80 text-sm max-w-[200px]">Automate your savings for pet insurance or emergency funds.</p>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full font-bold text-sm active:scale-95 transition-transform">
+                    Start Saving
+                </button>
+</div>
+<div class="absolute -right-12 -bottom-8 w-48 h-48 opacity-20">
+<span class="material-symbols-outlined !text-[12rem]" data-icon="savings">savings</span>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-none shadow-[0_-4px_24px_rgba(0,101,146,0.04)] rounded-t-[2rem]">
+<a href="main.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Inventory</span>
+</a>
+<a href="health.html" class="flex flex-col items-center justify-center text-[#586160] dark:text-slate-400 p-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Health</span>
+</a>
+<a href="finance.html" class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/40 text-sky-900 dark:text-sky-100 rounded-2xl px-5 py-2 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Lexend'] text-xs font-medium mt-1">Finance</span>
+</a>
+</nav>
+</body></html>
